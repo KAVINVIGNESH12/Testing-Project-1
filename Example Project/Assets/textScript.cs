@@ -11,7 +11,8 @@ public class textScript : MonoBehaviour, IPointerClickHandler
     {
         TMP_Text myText = GetComponent<TMP_Text>();
         int linkIndex = TMP_TextUtilities.FindIntersectingLink(myText, eventData.position, null);
-        if(linkIndex != -1)
+        // Debug.Log(linkIndex);
+        if (linkIndex != -1)
         {
             TMP_LinkInfo myLink = myText.textInfo.linkInfo[linkIndex];
             Application.OpenURL(myLink.GetLinkID());
